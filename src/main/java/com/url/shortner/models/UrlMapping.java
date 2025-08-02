@@ -21,6 +21,6 @@ public class UrlMapping {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "UrlMapping")
+    @OneToMany(mappedBy = "urlMapping")  // Fixed: now matches ClickEvent's field
     private List<ClickEvent> clickEvents;
 }
