@@ -10,4 +10,3 @@ public class UrlShortnerApplication {
 		System.out.println("All Services are running");
 	}
 }
-	
