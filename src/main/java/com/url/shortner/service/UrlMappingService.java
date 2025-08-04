@@ -98,12 +98,11 @@ public class UrlMappingService {
 
     public UrlMapping getOriginalUrl(String shortUrl) {
         UrlMapping urlMapping = urlMappingRepository.findByShortUrl(shortUrl);
-
         if(urlMapping != null) {
             urlMapping.setClickCount(urlMapping.getClickCount() + 1);
             urlMappingRepository.save(urlMapping);
 
-            //Record click Events
+            // -> Record click Events --> How many times a specific URL is clicked
             ClickEvent clickEvent = new ClickEvent();
             clickEvent.setClickDate(LocalDateTime.now());
             clickEvent.setUrlMapping(urlMapping);
