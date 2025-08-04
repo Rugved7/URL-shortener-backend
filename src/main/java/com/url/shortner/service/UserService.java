@@ -13,7 +13,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 @AllArgsConstructor
@@ -42,6 +41,6 @@ public class UserService {
 
     public User findByUsername(String name) {
         return userRepository.findByUsername(name).orElseThrow(
-                () -> new UsernameNotFoundException("User now found with name " + name));
+                () -> new UsernameNotFoundException("User not found with name " + name));
     }
 }
