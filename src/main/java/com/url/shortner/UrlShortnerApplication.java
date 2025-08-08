@@ -9,4 +9,4 @@ public class UrlShortnerApplication {
 		SpringApplication.run(UrlShortnerApplication.class, args);
 		System.out.println("All Services are running");
 	}
-}
+} 
